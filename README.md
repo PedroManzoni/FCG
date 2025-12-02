@@ -1,8 +1,8 @@
-# ?? FCG API - Sistema de Gerenciamento de Jogos
+# FCG API - Sistema de Gerenciamento de Jogos
 
-API RESTful para gerenciamento de jogos e usu·rios, desenvolvida com .NET 8, Clean Architecture e autenticaÁ„o JWT.
+API RESTful para gerenciamento de jogos e usu√°rios, desenvolvida com .NET 8, Clean Architecture e autentica√ß√£o JWT.
 
-## ?? Tecnologias
+## Tecnologias
 
 - **.NET 8**
 - **ASP.NET Core Web API**
@@ -14,26 +14,26 @@ API RESTful para gerenciamento de jogos e usu·rios, desenvolvida com .NET 8, Cle
 - **xUnit + Moq (Testes)**
 - **Swagger/OpenAPI**
 
-## ?? Estrutura do Projeto
+## Estrutura do Projeto
 ```
 Fcg/
-??? Fcg.Api/              # Camada de apresentaÁ„o (Controllers/Endpoints)
-??? Fcg.Domain/           # LÛgica de negÛcio (Handlers, Entities, Interfaces)
-??? Fcg.Data/             # Acesso a dados (RepositÛrios, DbContext)
+??? Fcg.Api/              # Camada de apresenta√ß√£o (Controllers/Endpoints)
+??? Fcg.Domain/           # L√≥gica de neg√≥cio (Handlers, Entities, Interfaces)
+??? Fcg.Data/             # Acesso a dados (Reposit√≥rios, DbContext)
 ??? Fcg.Shareable/        # DTOs, Requests, Responses
-??? Fcg.IOC/              # InjeÁ„o de dependÍncias
-??? Fcg.Tests/            # Testes unit·rios
+??? Fcg.IOC/              # Inje√ß√£o de depend√™ncias
+??? Fcg.Tests/            # Testes unit√°rios
 ```
 
-## ?? PrÈ-requisitos
+## Pr√©-requisitos
 
 - [.NET 8 SDK]
 - [SQL Server](ou SQL Server Express)
 - [Visual Studio 2022] ou [VS Code]
 
-## ?? ConfiguraÁ„o
+## Configura√ß√£o
 
-### 1. Clone o repositÛrio
+### 1. Clone o reposit√≥rio
 ```bash
 git clone https://github.com/seu-usuario/fcg-api.git
 cd fcg-api
@@ -75,25 +75,25 @@ cd Fcg.Api
 dotnet run
 ```
 
-A API estar· disponÌvel em: `https://localhost:5001` ou `http://localhost:5000`
+A API estar√° dispon√≠vel em: `https://localhost:5001` ou `http://localhost:5000`
 
 Acesse o Swagger: `https://localhost:5001/swagger`
 
-## ?? Executar Testes
+## Executar Testes
 ```bash
 dotnet test
 ```
 
-## ?? Endpoints principais
+## Endpoints principais
 
-### AutenticaÁ„o
+### Autentica√ß√£o
 - `POST /api/v1/auth/login` - Fazer login
 
-### Usu·rios
-- `POST /api/v1/user/create` - Criar usu·rio
-- `GET /api/v1/user/get/{email}` - Buscar usu·rio (autenticado)
-- `PUT /api/v1/user/update/{email}` - Atualizar usu·rio (autenticado)
-- `DELETE /api/v1/user/delete/{email}` - Deletar usu·rio (admin)
+### Usu√°rios
+- `POST /api/v1/user/create` - Criar usu√°rio
+- `GET /api/v1/user/get/{email}` - Buscar usu√°rio (autenticado)
+- `PUT /api/v1/user/update/{email}` - Atualizar usu√°rio (autenticado)
+- `DELETE /api/v1/user/delete/{email}` - Deletar usu√°rio (admin)
 
 ### Jogos
 - `POST /api/v1/game/create` - Criar jogo (admin)
@@ -101,25 +101,25 @@ dotnet test
 - `PUT /api/v1/game/update/{name}` - Atualizar jogo (admin)
 - `DELETE /api/v1/game/delete/{name}` - Deletar jogo (admin)
 
-## ?? AutenticaÁ„o
+## Autentica√ß√£o
 
 A API usa JWT Bearer Token. Para acessar endpoints protegidos:
 
-1. FaÁa login em `/api/v1/auth/login`
+1. Fa√ßa login em `/api/v1/auth/login`
 2. Copie o token retornado
 3. No Swagger, clique em "Authorize" e cole o token
 4. Ou adicione o header: `Authorization: Bearer {seu-token}`
 
-## ?? Roles
+## Roles
 
-- **User**: Pode ver e editar seu prÛprio perfil
-- **Admin**: Pode gerenciar jogos e usu·rios
+- **User**: Pode ver e editar seu pr√≥prio perfil
+- **Admin**: Pode gerenciar jogos e usu√°rios
 
-## ??? Banco de Dados
+## Banco de Dados
 
 ### Criar o primeiro admin
 
-ApÛs rodar as migrations, execute no SQL Server:
+Ap√≥s rodar as migrations, execute no SQL Server:
 ```sql
 INSERT INTO Clientes (Id, Name, Email, Password, Role, CreatedAt, LastUpdatedAt)
 VALUES (
@@ -140,7 +140,7 @@ SET Role = 'Admin'
 WHERE Email = 'seu-email@email.com';
 ```
 
-## ??? Desenvolvimento
+## Desenvolvimento
 
 ### Adicionar nova migration
 ```bash
@@ -152,13 +152,13 @@ dotnet ef database update --startup-project ../Fcg.Api
 ### Estrutura de pastas recomendada
 ```
 Fcg.Domain/
-??? Entities/          # Entidades do domÌnio
-??? Interfaces/        # Contratos dos repositÛrios
+??? Entities/          # Entidades do dom√≠nio
+??? Interfaces/        # Contratos dos reposit√≥rios
 ??? GameHandlers/      # Handlers de jogos
-??? UserHandlers/      # Handlers de usu·rios
+??? UserHandlers/      # Handlers de usu√°rios
 ```
 
-## ????? Autor
+## Autor
 
 **Manzoni**
 - Email: pedromanzonidev@gmail.com
