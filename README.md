@@ -17,12 +17,12 @@ API RESTful para gerenciamento de jogos e usuários, desenvolvida com .NET 8, Cl
 ## Estrutura do Projeto
 ```
 Fcg/
-??? Fcg.Api/              # Camada de apresentação (Controllers/Endpoints)
-??? Fcg.Domain/           # Lógica de negócio (Handlers, Entities, Interfaces)
-??? Fcg.Data/             # Acesso a dados (Repositórios, DbContext)
-??? Fcg.Shareable/        # DTOs, Requests, Responses
-??? Fcg.IOC/              # Injeção de dependências
-??? Fcg.Tests/            # Testes unitários
+ Fcg.Api/              # Camada de apresentação (Controllers/Endpoints)
+ Fcg.Domain/           # Lógica de negócio (Handlers, Entities, Interfaces)
+ Fcg.Data/             # Acesso a dados (Repositórios, DbContext)
+ Fcg.Shareable/        # DTOs, Requests, Responses
+ Fcg.IOC/              # Injeção de dependências
+ Fcg.Tests/            # Testes unitários
 ```
 
 ## Pré-requisitos
@@ -152,10 +152,10 @@ dotnet ef database update --startup-project ../Fcg.Api
 ### Estrutura de pastas recomendada
 ```
 Fcg.Domain/
-??? Entities/          # Entidades do domínio
-??? Interfaces/        # Contratos dos repositórios
-??? GameHandlers/      # Handlers de jogos
-??? UserHandlers/      # Handlers de usuários
+ Entities/          # Entidades do domínio
+ Interfaces/        # Contratos dos repositórios
+ GameHandlers/      # Handlers de jogos
+ UserHandlers/      # Handlers de usuários
 ```
 
 ## Autor
